@@ -20,8 +20,11 @@ const Header = () => {
       <div className="container flex items-center justify-between">
         <a href="#" className="flex items-center space-x-2">
           <div className="font-bold text-xl flex items-center">
-            <span className="text-white">OREDY</span>
-            <span className="text-xs ml-1 mt-2 text-gray-400">TECHNOLOGIES</span>
+            <img 
+              src="/lovable-uploads/87061d3a-bd9e-4646-a028-77c0524dc6b5.png" 
+              alt="OREDY Technologies Logo" 
+              className="h-10 w-auto"
+            />
           </div>
         </a>
         
