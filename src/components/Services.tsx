@@ -1,16 +1,19 @@
 
 import { Monitor, Smartphone, Bookmark } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const ServiceCard = ({ 
   icon: Icon, 
   title, 
   description, 
-  linkText 
+  linkText,
+  linkUrl 
 }: { 
   icon: any, 
   title: string, 
   description: string, 
-  linkText: string 
+  linkText: string,
+  linkUrl: string 
 }) => {
   return (
     <div className="service-card group">
@@ -21,7 +24,7 @@ const ServiceCard = ({
       </div>
       <h3 className="text-xl font-bold mb-4">{title}</h3>
       <p className="text-gray-300 mb-6">{description}</p>
-      <a href="#" className="text-turquoise hover:underline inline-block">{linkText}</a>
+      <Link to={linkUrl} className="text-turquoise hover:underline inline-block">{linkText}</Link>
     </div>
   );
 };
@@ -41,6 +44,7 @@ const Services = () => {
             title="Web design"
             description="Je suis capable de transformer vos idées en un site web pour l'image numérique de votre entreprise"
             linkText="Voir mes travaux"
+            linkUrl="/portfolio/webdesign"
           />
           
           <ServiceCard 
@@ -48,6 +52,7 @@ const Services = () => {
             title="WordPress"
             description="Je suis spécialisé pour structurer vos idées en un site web utilisant WordPress, pour améliorer l'image numérique de votre entreprise"
             linkText="Voir mes travaux"
+            linkUrl="/portfolio/wordpress"
           />
           
           <ServiceCard 
@@ -55,6 +60,7 @@ const Services = () => {
             title="Développement"
             description="Propulsez l'image numérique de votre entreprise avec mon expertise pointue en développement mobile d'applications."
             linkText="Voir mes travaux"
+            linkUrl="/portfolio/development"
           />
         </div>
       </div>
