@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -35,7 +36,7 @@ const Hero = () => {
               Transformez votre vision en réalité numérique avec notre expertise en création de sites web
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <a href="#" className="btn btn-primary">Voir mon CV</a>
+              <Link to="/cv" className="btn btn-primary">Voir mon CV</Link>
               <a href="#contact" className="btn btn-outline">Me contacter</a>
             </div>
           </div>
