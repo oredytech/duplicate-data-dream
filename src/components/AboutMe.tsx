@@ -1,5 +1,6 @@
 
 import { ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const AboutMe = () => {
   return (
@@ -38,9 +39,9 @@ const AboutMe = () => {
             <p className="text-gray-300 mb-6">
               Si nous sommes le reflet de ce que nous créons, alors je suis les touches du clavier qui capturent mes pensées, les écrans qui éclairent mes idées. Chaque fonction, chaque balise, chaque style que j'écris n'est pas simplement du code, mais une extension de moi-même, une manière de transformer une vision en réalité numérique.
             </p>
-            <a href="#" className="btn btn-outline inline-flex items-center">
+            <Link to="/about" className="btn btn-outline inline-flex items-center">
               Lire Plus <ChevronRight className="ml-2" size={16} />
-            </a>
+            </Link>
           </div>
         </div>
       </div>
