@@ -20,19 +20,19 @@ const DevelopmentPortfolio = () => {
   const [portfolioItems, setPortfolioItems] = useState<PortfolioItem[]>([
     {
       id: 1,
-      title: "Site d’information et radio en ligne",
-     imageUrl: "public/lovable-uploads/GOMA WEBRADIO.JPG",
+      title: "Site d'information et radio en ligne",
+      imageUrl: "/lovable-uploads/7c4231fc-4528-4ab5-a4ae-283376f13464.png",
       url: "https://gomawebradio.com",
-      description: "Un site web d’information couplé à une radio en ligne, offrant un accès direct à l’actualité locale et aux émissions en streaming.",
+      description: "Un site web d'information couplé à une radio en ligne, offrant un accès direct à l'actualité locale et aux émissions en streaming.",
       technologies: ["React", "Node.js", "MongoDB", "Stripe"],
       isLoading: true
     },
     {
       id: 2,
-      title: "Site d’Artiste",
-      imageUrl: "public/lovable-uploads/SandraPink.JPG",
+      title: "Site d'Artiste",
+      imageUrl: "/lovable-uploads/2e926fd3-e843-4933-9f60-81ebf24c44e9.png",
       url: "https://sandrapinklinda.com/",
-      description: "Un site web artistique offrant un accès à l’actualités de l'artiste Sandra Pink Linda.",
+      description: "Un site web artistique offrant un accès à l'actualités de l'artiste Sandra Pink Linda.",
       technologies: ["HTML", "CSS", "JavaScrip", "blog"],
       isLoading: true
     },
