@@ -32,7 +32,6 @@ const Hero = () => {
               Développeur Frontend
             </h2>
             <p className="text-lg text-gray-300 mb-8 max-w-2xl">
-              Des designs modernes et fonctionnels, adaptés à vos besoins spécifiques.
               Transformez votre vision en réalité numérique avec notre expertise en création de sites web
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
