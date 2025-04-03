@@ -23,7 +23,7 @@ const TESTIMONIALS: Testimonial[] = [
     name: "MUNGUIKO THIERRY",
     company: "AU PIC INFO",
     text: "Agence finaliste de lex capitale de Mr Daryl MUSHAKULU dans le design de ligne site, a su faire du design de fonctionnalités.",
-    avatarUrl: "/lovable-uploads/031ac89b-6d19-4dc8-8e29-d6975a332519.png"
+    avatarUrl: "/lovable-uploads/21e4a9bf-f88f-4e91-b292-82cf70cfce10.png"
   },
   {
     id: 3,
@@ -44,7 +44,7 @@ const TESTIMONIALS: Testimonial[] = [
     name: "John TSONGO",
     company: "PANA RADIO",
     text: "A l'expertise de Mrsharyl, notre site reste à traiter ses produits et sa performance. Je recommande vivement leurs services pour toute entreprise cherchant à briller en ligne.",
-    avatarUrl: "/lovable-uploads/21e4a9bf-f88f-4e91-b292-82cf70cfce10.png"
+    avatarUrl: "/lovable-uploads/031ac89b-6d19-4dc8-8e29-d6975a332519.png"
   }
 ];
 
