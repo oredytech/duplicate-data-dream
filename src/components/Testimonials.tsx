@@ -22,28 +22,28 @@ const TESTIMONIALS: Testimonial[] = [
     id: 2,
     name: "MUNGUIKO THIERRY",
     company: "AU PIC INFO",
-    text: "Agence finaliste de lex capitale de Mr Daryl MUSHAKULU dans le design de ligne site, a su faire du design de fonctionnalités.",
+    text: "Agence finaliste de lex capitale de Mr Oredy MUSANDA dans le design de ligne site, a su faire du design de fonctionnalités.",
     avatarUrl: "/lovable-uploads/21e4a9bf-f88f-4e91-b292-82cf70cfce10.png"
   },
   {
     id: 3,
     name: "CT KAVYAVU JACKSON",
-    company: "KAZEL GROUP",
-    text: "Un très bon recensement des archives, analyse qualité / prix. Oredy MUSHAKULU vous aura satisfaits car les horaires qu'il a étudiés sont conformes aux vos attentes grâce à son technicien disponible sur tous besoins conformes au contrats.",
+    company: "UCNDK",
+    text: "Un très bon recensement des archives, analyse qualité / prix. Oredy MUSANDA vous aura satisfaits car les horaires qu'il a étudiés sont conformes aux vos attentes grâce à son technicien disponible sur tous besoins conformes au contrats.",
     avatarUrl: "/lovable-uploads/3d3dc0d2-e7e3-4c33-af97-b18f16a2bd23.png"
   },
   {
     id: 4,
     name: "MAGLOIRE MUTULUVA",
     company: "MC CIPAC SULOAME KATINDO",
-    text: "Un site plus fiable, c'est pour accomplir et refléchicher au plus de qualité. Daryl MUSHAKULU a fait du design un parfait numérique.",
+    text: "Un site plus fiable, c'est pour accomplir et refléchicher au plus de qualité. Oredy Musanda a fait du design un parfait numérique.",
     avatarUrl: "/lovable-uploads/22590fe0-2fc8-4f3b-9db6-0cbb305e61fe.png"
   },
   {
     id: 5,
     name: "John TSONGO",
     company: "PANA RADIO",
-    text: "A l'expertise de Mrsharyl, notre site reste à traiter ses produits et sa performance. Je recommande vivement leurs services pour toute entreprise cherchant à briller en ligne.",
+    text: "A l'expertise de Mr Musanda, notre site reste à traiter ses produits et sa performance. Je recommande vivement leurs services pour toute entreprise cherchant à briller en ligne.",
     avatarUrl: "/lovable-uploads/031ac89b-6d19-4dc8-8e29-d6975a332519.png"
   }
 ];
