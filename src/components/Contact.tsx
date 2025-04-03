@@ -42,13 +42,13 @@ const Contact = () => {
             <div className="space-y-6 mb-8">
               <div>
                 <p className="text-gray-300">+243 815 066 176</p>
-                <p className="text-gray-300">+243 973 045 313</p>
+                <p className="text-gray-300">+243 996 886 079</p>
               </div>
               
-              <p className="text-gray-300">mszchryl@gmail.fr</p>
+              <p className="text-gray-300">contact@oredytech.com</p>
               
               <div className="flex space-x-4">
-                <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-turquoise hover:text-black transition-colors">
+                <a href="https://www.facebook.com/profile.php?id=61561656035139&mibextid=ZbWKwL" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-turquoise hover:text-black transition-colors">
                   <Facebook size={20} />
                 </a>
                 <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-turquoise hover:text-black transition-colors">
