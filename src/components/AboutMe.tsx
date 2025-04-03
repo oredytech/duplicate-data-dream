@@ -14,7 +14,7 @@ const AboutMe = () => {
                   <div className="w-full h-full p-4">
                     <div className="w-full h-full relative overflow-hidden rounded-lg border-2 border-turquoise/30">
                       <img 
-                        src="/lovable-uploads/6a9984fe-a9bb-4fe7-8b59-8222fd6c6332.png" 
+                        src="public/lovable-uploads/Oredy.jpg" 
                         alt="OREDY" 
                         className="w-full h-full object-cover"
                       />
