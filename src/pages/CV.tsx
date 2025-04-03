@@ -31,7 +31,7 @@ const CV = () => {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h3 className="text-xl font-bold">OREDY</h3>
+                  <h3 className="text-xl font-bold">OREDY MUSANDA</h3>
                   <p className="text-turquoise">Développeur Frontend</p>
                 </div>
                 
@@ -39,9 +39,9 @@ const CV = () => {
                   <div>
                     <h4 className="font-semibold text-turquoise mb-2">Contact</h4>
                     <ul className="space-y-2 text-sm">
-                      <li>Email: contact@oredy.com</li>
-                      <li>Téléphone: +243 999 999 999</li>
-                      <li>Localisation: Goma, RDC</li>
+                      <li>Email: contact@oredytech.com</li>
+                      <li>Téléphone: +243 996 886 079</li>
+                      <li>Localisation: Goma, RDC/NORD-KIVU</li>
                     </ul>
                   </div>
                 </div>
@@ -106,9 +106,9 @@ const CV = () => {
               <div className="bg-mediumGray p-6 rounded-lg">
                 <h4 className="font-semibold text-turquoise mb-4">Langues</h4>
                 <ul className="space-y-2">
-                  <li>Français - Natif</li>
+                  <li>Français - Courant</li>
                   <li>Anglais - Professionnel</li>
-                  <li>Swahili - Courant</li>
+                  <li>Swahili - Natif</li>
                 </ul>
               </div>
             </div>
@@ -131,21 +131,21 @@ const CV = () => {
                   
                   <div className="border-l-2 border-turquoise pl-4 relative">
                     <div className="absolute w-3 h-3 bg-turquoise rounded-full -left-[7px] top-0"></div>
-                    <h4 className="font-semibold">Développeur Web</h4>
-                    <p className="text-turquoise text-sm mb-2">Digital Agency | 2018 - 2020</p>
+                    <h4 className="font-semibold">Radio Diffuseur</h4>
+                    <p className="text-turquoise text-sm mb-2">Radio TAYNA | 2018 - 2024</p>
                     <p className="text-gray-300 text-sm">
-                      Conception et développement de sites web pour divers clients, 
-                      optimisation SEO, maintenance et support technique.
+                      Passionné par la technique et la transmission, j’ai veillé à ce que 
+                      chaque onde porte une histoire, chaque fréquence une émotion.
                     </p>
                   </div>
                   
                   <div className="border-l-2 border-turquoise pl-4 relative">
                     <div className="absolute w-3 h-3 bg-turquoise rounded-full -left-[7px] top-0"></div>
                     <h4 className="font-semibold">Webmaster</h4>
-                    <p className="text-turquoise text-sm mb-2">Local Media | 2016 - 2018</p>
+                    <p className="text-turquoise text-sm mb-2">Radio TAYNA | 2022 - 2024</p>
                     <p className="text-gray-300 text-sm">
                       Gestion et mise à jour de contenu web, administration de CMS WordPress,
-                      création de newsletters et support aux équipes éditoriales.
+                      création de newsletters, et Maintenance du site web.
                     </p>
                   </div>
                 </div>
@@ -157,8 +157,8 @@ const CV = () => {
                 <div className="space-y-6">
                   <div className="border-l-2 border-turquoise pl-4 relative">
                     <div className="absolute w-3 h-3 bg-turquoise rounded-full -left-[7px] top-0"></div>
-                    <h4 className="font-semibold">Master en Développement Web</h4>
-                    <p className="text-turquoise text-sm mb-2">Université de Technologie | 2014 - 2016</p>
+                    <h4 className="font-semibold">Autodidacte en Développement Web</h4>
+                    <p className="text-turquoise text-sm mb-2">Sites des formations en ligne | 2017 - Présent</p>
                     <p className="text-gray-300 text-sm">
                       Spécialisation en technologies web modernes, gestion de projets numériques.
                     </p>
@@ -166,10 +166,10 @@ const CV = () => {
                   
                   <div className="border-l-2 border-turquoise pl-4 relative">
                     <div className="absolute w-3 h-3 bg-turquoise rounded-full -left-[7px] top-0"></div>
-                    <h4 className="font-semibold">Licence en Informatique</h4>
-                    <p className="text-turquoise text-sm mb-2">Université des Sciences | 2011 - 2014</p>
+                    <h4 className="font-semibold">Graguat en Communication</h4>
+                    <p className="text-turquoise text-sm mb-2">Université du CAPROMAD | 2020 - 2023</p>
                     <p className="text-gray-300 text-sm">
-                      Formation générale en informatique, programmation et réseaux.
+                      Formation générale en communication, Journalisme et Marketing.
                     </p>
                   </div>
                 </div>
@@ -181,22 +181,22 @@ const CV = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="border border-lightGray rounded p-3 hover:border-turquoise transition-colors">
                     <h4 className="font-semibold">React Developer</h4>
-                    <p className="text-turquoise text-sm">Meta | 2022</p>
-                  </div>
-                  
-                  <div className="border border-lightGray rounded p-3 hover:border-turquoise transition-colors">
-                    <h4 className="font-semibold">WordPress Expert</h4>
-                    <p className="text-turquoise text-sm">WordPress Academy | 2021</p>
+                    <p className="text-turquoise text-sm">Udemy | 2024</p>
                   </div>
                   
                   <div className="border border-lightGray rounded p-3 hover:border-turquoise transition-colors">
                     <h4 className="font-semibold">UI/UX Design</h4>
-                    <p className="text-turquoise text-sm">Design Institute | 2020</p>
+                    <p className="text-turquoise text-sm">Auto-formation | 2023</p>
                   </div>
                   
                   <div className="border border-lightGray rounded p-3 hover:border-turquoise transition-colors">
                     <h4 className="font-semibold">JavaScript Advanced</h4>
-                    <p className="text-turquoise text-sm">JS Foundation | 2019</p>
+                    <p className="text-turquoise text-sm">Udemy | 2022</p>
+                  </div>
+                  
+                  <div className="border border-lightGray rounded p-3 hover:border-turquoise transition-colors">
+                    <h4 className="font-semibold">WordPress Expert</h4>
+                    <p className="text-turquoise text-sm">Auto-formation | 2018</p>
                   </div>
                 </div>
               </div>
@@ -206,16 +206,18 @@ const CV = () => {
                 
                 <div className="space-y-4">
                   <div>
-                    <h4 className="font-semibold">Portfolio Créatif</h4>
+                    <h4 className="font-semibold">Goma Webradio</h4>
                     <p className="text-gray-300 text-sm">
-                      Développement d'un portfolio interactif utilisant les dernières technologies web.
+                      Développement d’un site web d’information couplé à une radio en ligne,
+                      offrant un accès direct à l’actualité locale et aux émissions en streaming.
                     </p>
                   </div>
                   
                   <div>
-                    <h4 className="font-semibold">Application de Gestion de Tâches</h4>
+                    <h4 className="font-semibold">GOWERA</h4>
                     <p className="text-gray-300 text-sm">
-                      Création d'une application React pour la gestion de tâches personnelles.
+                      Un projet visant à offrir une plateforme de streaming radio gratuite, 
+                      connectant les auditeurs aux stations du monde entier en un clic.
                     </p>
                   </div>
                   
