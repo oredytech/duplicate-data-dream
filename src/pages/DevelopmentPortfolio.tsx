@@ -21,7 +21,7 @@ const DevelopmentPortfolio = () => {
     {
       id: 1,
       title: "Site d’information et radio en ligne",
-     imageUrl: "/gomawebradio.png",
+     imageUrl: "/GOMA WEBRADIO.JPG",
       url: "https://gomawebradio.com",
       description: "Un site web d’information couplé à une radio en ligne, offrant un accès direct à l’actualité locale et aux émissions en streaming.",
       technologies: ["React", "Node.js", "MongoDB", "Stripe"],
@@ -30,7 +30,7 @@ const DevelopmentPortfolio = () => {
     {
       id: 2,
       title: "Site d’Artiste",
-      imageUrl: "/sandrapiklinda.png",
+      imageUrl: "/SandraPink.JPG",
       url: "https://sandrapinklinda.com/",
       description: "Un site web artistique offrant un accès à l’actualités de l'artiste Sandra Pink Linda.",
       technologies: ["HTML", "CSS", "JavaScrip", "blog"],
@@ -39,7 +39,7 @@ const DevelopmentPortfolio = () => {
     {
       id: 3,
       title: "GOWERA",
-      imageUrl: "/gowera.png",
+      imageUrl: "/gowera.JPG",
       url: "https://gowera.com",
       description: "Application de radio en ligne.",
       technologies: ["TypeScript", "Radio API"],
