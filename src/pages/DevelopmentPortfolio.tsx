@@ -20,40 +20,31 @@ const DevelopmentPortfolio = () => {
   const [portfolioItems, setPortfolioItems] = useState<PortfolioItem[]>([
     {
       id: 1,
-      title: "Application de Gestion des Tâches",
-      imageUrl: "/lovable-uploads/6a9984fe-a9bb-4fe7-8b59-8222fd6c6332.png",
-      url: "https://task-manager-demo.example.com",
-      description: "Application permettant aux utilisateurs de gérer leurs tâches quotidiennes avec des fonctionnalités de rappel et de catégorisation.",
-      technologies: ["React", "TypeScript", "Firebase"],
-      isLoading: true
-    },
-    {
-      id: 2,
-      title: "Plateforme E-commerce",
-      imageUrl: "/lovable-uploads/6a9984fe-a9bb-4fe7-8b59-8222fd6c6332.png",
-      url: "https://ecommerce-demo.example.com",
-      description: "Une solution e-commerce complète avec panier d'achat, paiement sécurisé et gestion des commandes.",
+      title: "Site d’information et radio en ligne",
+     imageUrl: "/gomawebradio.png",
+      url: "https://gomawebradio.com",
+      description: "Un site web d’information couplé à une radio en ligne, offrant un accès direct à l’actualité locale et aux émissions en streaming.",
       technologies: ["React", "Node.js", "MongoDB", "Stripe"],
       isLoading: true
     },
     {
-      id: 3,
-      title: "Application Météo",
-      imageUrl: "/lovable-uploads/6a9984fe-a9bb-4fe7-8b59-8222fd6c6332.png",
-      url: "https://weather-app-demo.example.com",
-      description: "Application de prévisions météorologiques avec localisation automatique et alertes personnalisées.",
-      technologies: ["React Native", "OpenWeatherMap API"],
+      id: 2,
+      title: "Site d’Artiste",
+      imageUrl: "/sandrapiklinda.png",
+      url: "https://sandrapinklinda.com/",
+      description: "Un site web artistique offrant un accès à l’actualités de l'artiste Sandra Pink Linda.",
+      technologies: ["HTML", "CSS", "JavaScrip", "blog"],
       isLoading: true
     },
     {
-      id: 4,
-      title: "Dashboard Analytique",
-      imageUrl: "/lovable-uploads/6a9984fe-a9bb-4fe7-8b59-8222fd6c6332.png",
-      url: "https://analytics-demo.example.com",
-      description: "Tableau de bord analytique interactif avec visualisations de données en temps réel pour les entreprises.",
-      technologies: ["React", "D3.js", "WebSockets"],
+      id: 3,
+      title: "GOWERA",
+      imageUrl: "/gowera.png",
+      url: "https://gowera.com",
+      description: "Application de radio en ligne.",
+      technologies: ["TypeScript", "Radio API"],
       isLoading: true
-    }
+    },
   ]);
 
   useEffect(() => {
