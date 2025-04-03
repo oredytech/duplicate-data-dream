@@ -39,19 +39,19 @@ const AboutMePage = () => {
                   <div className="space-y-3">
                     <p className="flex items-center">
                       <span className="w-24 text-gray-400">Email:</span>
-                      <a href="mailto:contact@oredy.com" className="text-turquoise hover:underline">contact@oredy.com</a>
+                      <a href="mailto:contact@oredy.com" className="text-turquoise hover:underline">contact@oredytech.com</a>
                     </p>
                     <p className="flex items-center">
                       <span className="w-24 text-gray-400">Téléphone:</span>
-                      <a href="tel:+123456789" className="text-turquoise hover:underline">+33 1 23 45 67 89</a>
+                      <a href="tel:+243851006476" className="text-turquoise hover:underline">+243 851 006 476</a>
                     </p>
                     <p className="flex items-center">
                       <span className="w-24 text-gray-400">Linkedin:</span>
-                      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-turquoise hover:underline">@oredy</a>
+                      <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" className="text-turquoise hover:underline">@oredy-musanda</a>
                     </p>
                     <p className="flex items-center">
                       <span className="w-24 text-gray-400">GitHub:</span>
-                      <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-turquoise hover:underline">@oredy</a>
+                      <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-turquoise hover:underline">@oredytech</a>
                     </p>
                   </div>
                 </div>
@@ -146,7 +146,7 @@ const AboutMePage = () => {
                 <div className="space-y-6">
                   <div className="relative pl-8 before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-px before:bg-turquoise/30">
                     <span className="absolute left-0 top-1 w-2 h-2 bg-turquoise rounded-full -translate-x-1/2"></span>
-                    <h3 className="text-xl font-bold">2020 - Présent</h3>
+                    <h3 className="text-xl font-bold">2023 - Présent</h3>
                     <p className="text-turquoise">Freelance Developer & Designer</p>
                     <p className="text-gray-300 mt-2">
                       Création de sites web et d'applications pour divers clients, de la conception à la mise en production.
@@ -155,19 +155,19 @@ const AboutMePage = () => {
                   
                   <div className="relative pl-8 before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-px before:bg-turquoise/30">
                     <span className="absolute left-0 top-1 w-2 h-2 bg-turquoise rounded-full -translate-x-1/2"></span>
-                    <h3 className="text-xl font-bold">2017 - 2020</h3>
-                    <p className="text-turquoise">Senior Developer chez TechCorp</p>
+                    <h3 className="text-xl font-bold">2022 - 2024</h3>
+                    <p className="text-turquoise">Créateur & Gestionnaire</p>
                     <p className="text-gray-300 mt-2">
-                      Développement d'applications web complexes, encadrement d'une équipe de développeurs juniors.
+                      Rédacteur, Webmaster et Développeur du site radiotayna.com.
                     </p>
                   </div>
                   
                   <div className="relative pl-8 before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-px before:bg-turquoise/30">
                     <span className="absolute left-0 top-1 w-2 h-2 bg-turquoise rounded-full -translate-x-1/2"></span>
-                    <h3 className="text-xl font-bold">2015 - 2017</h3>
-                    <p className="text-turquoise">Web Developer chez DigitalStudio</p>
+                    <h3 className="text-xl font-bold">2018 - 2020</h3>
+                    <p className="text-turquoise">Rédacteur Web & Blogueur</p>
                     <p className="text-gray-300 mt-2">
-                      Création de sites web responsifs et d'applications interactives pour des clients internationaux.
+                      Passionné du Web, Rédacteur & Créateur de Contenu
                     </p>
                   </div>
                 </div>
