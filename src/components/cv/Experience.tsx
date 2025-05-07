@@ -10,6 +10,18 @@ type Job = {
 
 const jobs: Job[] = [
   {
+    title: 'Directeur Technique',
+    company: 'KAKO Fm',
+    period: 'Septembre 2025 - Aujourd\'hui',
+    description: 'Gestion des équipements techniques de radiodiffusion et supervision de l\'équipe technique pour assurer une diffusion optimale des programmes.'
+  },
+  {
+    title: 'Enseignant',
+    company: 'UCNDK',
+    period: '2025 - Présent',
+    description: 'Donneur du cours de conception et gestion des sites web aux étudiants de la Science de l\'information et de la communication.'
+  },
+  {
     title: 'Développeur Frontend Senior',
     company: 'OREDY Technologies',
     period: '2020 - Présent',
