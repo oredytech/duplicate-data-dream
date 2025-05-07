@@ -1,8 +1,9 @@
 
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Download } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { Button } from '@/components/ui/button';
 
 const CV = () => {
   return (
@@ -233,7 +234,12 @@ const CV = () => {
           </div>
           
           <div className="mt-12 text-center">
-            <a href="#" className="btn btn-primary inline-flex items-center justify-center">
+            <a 
+              href="/assets/OREDY_CV.pdf" 
+              download="OREDY_MUSANDA_CV.pdf"
+              className="btn btn-primary inline-flex items-center justify-center"
+            >
+              <Download className="mr-2" size={18} />
               Télécharger le CV (PDF)
             </a>
           </div>
