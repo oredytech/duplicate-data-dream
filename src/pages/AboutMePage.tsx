@@ -26,7 +26,7 @@ const AboutMePage = () => {
                 <div className="relative rounded-lg overflow-hidden border-glow">
                   <div className="aspect-square bg-mediumGray relative">
                     <img 
-                      src="/lovable-uploads/6a9984fe-a9bb-4fe7-8b59-8222fd6c6332.png" 
+                      src="/lovable-uploads/cf0c9765-b0b7-401c-95ef-ca0fe62ee39d.png" 
                       alt="OREDY" 
                       className="w-full h-full object-cover"
                     />

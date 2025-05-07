@@ -26,7 +26,7 @@ const CV = () => {
                 <div className="flex flex-col items-center mb-6">
                   <div className="w-32 h-32 rounded-full bg-lightGray mb-4 overflow-hidden">
                     <img 
-                      src="/lovable-uploads/87061d3a-bd9e-4646-a028-77c0524dc6b5.png" 
+                      src="/lovable-uploads/cf0c9765-b0b7-401c-95ef-ca0fe62ee39d.png" 
                       alt="OREDY" 
                       className="w-full h-full object-cover"
                     />

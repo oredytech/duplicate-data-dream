@@ -13,7 +13,7 @@ const Hero = () => {
     <section id="home" className="relative min-h-screen flex items-center bg-darkGray overflow-hidden">
       <div className="absolute inset-0 z-0">
         {/* Image d'arrière-plan */}
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url("/lovable-uploads/3bfe6d5c-b718-43a3-b6c3-160a00e01a9b.png")' }}></div>
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url("/lovable-uploads/44ac66f7-c374-4e1d-aef0-fc263b369f8d.png")' }}></div>
         {/* Overlay foncé pour améliorer la lisibilité du texte */}
         <div className="absolute inset-0 bg-black/70"></div>
         {/* Dégradé vers le bas pour une transition fluide avec la section suivante */}
