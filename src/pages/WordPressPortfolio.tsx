@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import { useWordPressLogos } from '@/hooks/useWordPressLogos';
 import WordPressPortfolioItem, { WordPressProject } from '@/components/portfolio/WordPressPortfolioItem';
 import WordPressPortfolioModal from '@/components/portfolio/WordPressPortfolioModal';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 const initialProjects: WordPressProject[] = [
   {
@@ -46,34 +48,38 @@ const WordPressPortfolio = () => {
   const projectsWithLogos = useWordPressLogos(initialProjects);
 
   return (
-    <div className="min-h-screen bg-darkGray text-white pt-24 pb-16">
-      <div className="container">
-        <div className="mb-10">
-          <Link to="/#services" className="inline-flex items-center text-turquoise hover:underline mb-6">
-            <ArrowLeft size={16} className="mr-2" />
-            Retour aux services
-          </Link>
-          <h1 className="text-3xl md:text-4xl font-bold mb-3">Projets WordPress</h1>
-          <p className="text-gray-400">Découvrez mes réalisations WordPress personnalisées pour divers clients.</p>
-        </div>
+    <div className="min-h-screen bg-darkGray text-white">
+      <Header />
+      <main className="pt-24 pb-16">
+        <div className="container">
+          <div className="mb-10">
+            <Link to="/#services" className="inline-flex items-center text-turquoise hover:underline mb-6">
+              <ArrowLeft size={16} className="mr-2" />
+              Retour aux services
+            </Link>
+            <h1 className="text-3xl md:text-4xl font-bold mb-3">Projets WordPress</h1>
+            <p className="text-gray-400">Découvrez mes réalisations WordPress personnalisées pour divers clients.</p>
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projectsWithLogos.map((item) => (
-            <WordPressPortfolioItem 
-              key={item.id} 
-              item={item}
-              onClick={() => setSelectedItem(item)}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {projectsWithLogos.map((item) => (
+              <WordPressPortfolioItem 
+                key={item.id} 
+                item={item}
+                onClick={() => setSelectedItem(item)}
+              />
+            ))}
+          </div>
+
+          {selectedItem && (
+            <WordPressPortfolioModal
+              item={selectedItem}
+              onClose={() => setSelectedItem(null)}
             />
-          ))}
+          )}
         </div>
-
-        {selectedItem && (
-          <WordPressPortfolioModal
-            item={selectedItem}
-            onClose={() => setSelectedItem(null)}
-          />
-        )}
-      </div>
+      </main>
+      <Footer />
     </div>
   );
 };
