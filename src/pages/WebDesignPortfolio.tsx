@@ -10,42 +10,6 @@ import { usePortfolioData } from '@/components/portfolio/usePortfolioData';
 
 const initialPortfolioItems: PortfolioItemType[] = [
   {
-    id: 1,
-    title: "Goma Webradio",
-    imageUrl: "/lovable-uploads/GOMA WEBRADIO.JPG",
-    url: "https://gomawebradio.com",
-    description: "Site web d'information couplé à une radio en ligne, offrant un accès direct à l'actualité locale et aux émissions en streaming.",
-    technologies: ["WordPress", "HTML5", "CSS3", "JavaScript"],
-    isLoading: true
-  },
-  {
-    id: 2,
-    title: "GOWERA",
-    imageUrl: "/lovable-uploads/6a9984fe-a9bb-4fe7-8b59-8222fd6c6332.png",
-    url: "https://gowera.com",
-    description: "Une plateforme de streaming radio gratuite, connectant les auditeurs aux stations du monde entier en un clic.",
-    technologies: ["React", "Node.js", "CSS3", "API Integration"],
-    isLoading: true
-  },
-  {
-    id: 3,
-    title: "RSIRDC",
-    imageUrl: "/lovable-uploads/6a9984fe-a9bb-4fe7-8b59-8222fd6c6332.png",
-    url: "https://rsirdc.org",
-    description: "Site institutionnel avec design moderne et intuitif pour une organisation non gouvernementale.",
-    technologies: ["WordPress", "Elementor", "PHP", "jQuery"],
-    isLoading: true
-  },
-  {
-    id: 4,
-    title: "Site Vitrine Entreprise",
-    imageUrl: "/lovable-uploads/6a9984fe-a9bb-4fe7-8b59-8222fd6c6332.png",
-    url: "https://corporate-webdesign.example.com",
-    description: "Site vitrine pour une entreprise de conseil avec un design épuré et professionnel.",
-    technologies: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
-    isLoading: true
-  },
-  {
     id: 5,
     title: "Portfolio Photographe",
     imageUrl: "/lovable-uploads/6a9984fe-a9bb-4fe7-8b59-8222fd6c6332.png",
