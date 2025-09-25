@@ -33,12 +33,12 @@ const Header = () => {
           </Link>
           
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#home" className="text-white hover:text-turquoise transition-colors">Home</a>
-            <a href="#about" className="text-white hover:text-turquoise transition-colors">About</a>
-            <a href="#services" className="text-white hover:text-turquoise transition-colors">Services</a>
+            <a href="/" className="text-white hover:text-turquoise transition-colors">Home</a>
+            <Link to="/about" className="text-white hover:text-turquoise transition-colors">About</Link>
+            <Link to="/services" className="text-white hover:text-turquoise transition-colors">Services</Link>
             <Link to="/blog" className="text-white hover:text-turquoise transition-colors">Blog</Link>
-            <a href="#testimonials" className="text-white hover:text-turquoise transition-colors">Témoignages</a>
-            <a href="#contact" className="text-white hover:text-turquoise transition-colors">Contacts</a>
+            <Link to="/testimonials" className="text-white hover:text-turquoise transition-colors">Témoignages</Link>
+            <Link to="/contact" className="text-white hover:text-turquoise transition-colors">Contacts</Link>
           </nav>
 
           <div className="flex items-center space-x-4">
@@ -62,12 +62,12 @@ const Header = () => {
         {mobileMenuOpen && (
           <div className="md:hidden absolute top-full left-0 w-full bg-black/95 backdrop-blur-md animate-fadeIn">
             <div className="container py-5 flex flex-col space-y-4">
-              <a href="#home" className="text-white hover:text-turquoise transition-colors py-2">Home</a>
-              <a href="#about" className="text-white hover:text-turquoise transition-colors py-2">About</a>
-              <a href="#services" className="text-white hover:text-turquoise transition-colors py-2">Services</a>
+              <a href="/" className="text-white hover:text-turquoise transition-colors py-2">Home</a>
+              <Link to="/about" className="text-white hover:text-turquoise transition-colors py-2">About</Link>
+              <Link to="/services" className="text-white hover:text-turquoise transition-colors py-2">Services</Link>
               <Link to="/blog" className="text-white hover:text-turquoise transition-colors py-2">Blog</Link>
-              <a href="#testimonials" className="text-white hover:text-turquoise transition-colors py-2">Témoignages</a>
-              <a href="#contact" className="text-white hover:text-turquoise transition-colors py-2">Contacts</a>
+              <Link to="/testimonials" className="text-white hover:text-turquoise transition-colors py-2">Témoignages</Link>
+              <Link to="/contact" className="text-white hover:text-turquoise transition-colors py-2">Contacts</Link>
             </div>
           </div>
         )}

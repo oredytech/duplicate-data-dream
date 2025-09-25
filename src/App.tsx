@@ -11,6 +11,9 @@ import WebDesignPortfolio from "./pages/WebDesignPortfolio";
 import DevelopmentPortfolio from "./pages/DevelopmentPortfolio";
 import CV from "./pages/CV";
 import AboutMePage from "./pages/AboutMePage";
+import ServicesPage from "./pages/ServicesPage";
+import TestimonialsPage from "./pages/TestimonialsPage";
+import ContactPage from "./pages/ContactPage";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 
@@ -29,6 +32,9 @@ const App = () => (
           <Route path="/portfolio/development" element={<DevelopmentPortfolio />} />
           <Route path="/cv" element={<CV />} />
           <Route path="/about" element={<AboutMePage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/testimonials" element={<TestimonialsPage />} />
+          <Route path="/contact" element={<ContactPage />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
