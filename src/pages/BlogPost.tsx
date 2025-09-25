@@ -1,0 +1,227 @@
+import { useParams, Link } from 'react-router-dom';
+import { Calendar, ArrowLeft, Share2, Facebook, Twitter } from 'lucide-react';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import { useWordPressPost } from '@/hooks/useWordPressBlog';
+import { Button } from '@/components/ui/button';
+
+const BlogPost = () => {
+  const { slug } = useParams<{ slug: string }>();
+  const { post, featuredMedia, loading, error } = useWordPressPost(slug || '');
+
+  const formatDate = (dateString: string) => {
+    return new Date(dateString).toLocaleDateString('fr-FR', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  };
+
+  const shareOnFacebook = () => {
+    const url = encodeURIComponent(window.location.href);
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+  };
+
+  const shareOnTwitter = () => {
+    const url = encodeURIComponent(window.location.href);
+    const text = encodeURIComponent(post?.title.rendered || '');
+    window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank');
+  };
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-darkGray text-white">
+        <Header />
+        <main className="pt-20">
+          <div className="container section">
+            <div className="animate-pulse">
+              <div className="h-8 bg-gray-600 rounded mb-4 w-3/4"></div>
+              <div className="h-4 bg-gray-600 rounded mb-6 w-1/4"></div>
+              <div className="h-96 bg-gray-600 rounded mb-8"></div>
+              <div className="space-y-4">
+                <div className="h-4 bg-gray-600 rounded"></div>
+                <div className="h-4 bg-gray-600 rounded w-5/6"></div>
+                <div className="h-4 bg-gray-600 rounded w-4/6"></div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
+  if (error || !post) {
+    return (
+      <div className="min-h-screen bg-darkGray text-white">
+        <Header />
+        <main className="pt-20">
+          <div className="container section text-center">
+            <h1 className="text-4xl font-bold mb-4 text-red-400">Article non trouvé</h1>
+            <p className="text-gray-300 mb-8">{error || 'Cet article n\'existe pas ou a été supprimé.'}</p>
+            <Link to="/blog">
+              <Button className="btn btn-primary">
+                <ArrowLeft className="mr-2" size={16} />
+                Retour au blog
+              </Button>
+            </Link>
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen bg-darkGray text-white">
+      <Header />
+      
+      <main className="pt-20">
+        <article className="section">
+          <div className="container max-w-4xl">
+            {/* Navigation */}
+            <div className="mb-8">
+              <Link 
+                to="/blog"
+                className="inline-flex items-center text-turquoise hover:text-turquoise/80 transition-colors"
+              >
+                <ArrowLeft size={16} className="mr-1" />
+                Retour au blog
+              </Link>
+            </div>
+
+            {/* Article Header */}
+            <header className="mb-8">
+              <h1 
+                className="text-3xl md:text-4xl font-bold mb-4 leading-tight"
+                dangerouslySetInnerHTML={{ __html: post.title.rendered }}
+              />
+              
+              <div className="flex items-center text-gray-400 mb-6">
+                <Calendar size={16} className="mr-2" />
+                {formatDate(post.date)}
+              </div>
+            </header>
+
+            {/* Featured Image */}
+            {featuredMedia && (
+              <div className="mb-8">
+                <img 
+                  src={featuredMedia.source_url}
+                  alt={featuredMedia.alt_text || post.title.rendered}
+                  className="w-full max-h-96 object-cover rounded-lg"
+                />
+              </div>
+            )}
+
+            {/* Article Content */}
+            <div className="lg:grid lg:grid-cols-4 lg:gap-8">
+              <div className="lg:col-span-3">
+                <div 
+                  className="prose prose-invert prose-lg max-w-none
+                    prose-headings:text-white prose-headings:font-semibold
+                    prose-p:text-gray-300 prose-p:leading-relaxed
+                    prose-a:text-turquoise prose-a:no-underline hover:prose-a:underline
+                    prose-strong:text-white prose-em:text-gray-300
+                    prose-ul:text-gray-300 prose-ol:text-gray-300
+                    prose-li:text-gray-300
+                    prose-blockquote:border-l-turquoise prose-blockquote:text-gray-300
+                    prose-code:bg-gray-800 prose-code:text-turquoise prose-code:px-1 prose-code:py-0.5 prose-code:rounded
+                    prose-pre:bg-gray-900 prose-pre:border prose-pre:border-gray-700"
+                  dangerouslySetInnerHTML={{ __html: post.content.rendered }}
+                />
+
+                {/* Social Sharing */}
+                <div className="mt-12 pt-8 border-t border-gray-700">
+                  <h3 className="text-lg font-semibold mb-4">Partager cet article</h3>
+                  <div className="flex gap-4">
+                    <Button
+                      onClick={shareOnFacebook}
+                      className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700"
+                    >
+                      <Facebook size={16} />
+                      Facebook
+                    </Button>
+                    <Button
+                      onClick={shareOnTwitter}
+                      className="flex items-center gap-2 bg-blue-400 hover:bg-blue-500"
+                    >
+                      <Twitter size={16} />
+                      Twitter
+                    </Button>
+                  </div>
+                </div>
+
+                {/* Comments Form */}
+                <div className="mt-12 pt-8 border-t border-gray-700">
+                  <h3 className="text-2xl font-semibold mb-6">Laisser un commentaire</h3>
+                  <form className="space-y-4">
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div>
+                        <label htmlFor="name" className="block text-sm font-medium mb-2">
+                          Nom *
+                        </label>
+                        <input
+                          type="text"
+                          id="name"
+                          required
+                          className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-lg focus:ring-2 focus:ring-turquoise focus:border-transparent"
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="email" className="block text-sm font-medium mb-2">
+                          Email *
+                        </label>
+                        <input
+                          type="email"
+                          id="email"
+                          required
+                          className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-lg focus:ring-2 focus:ring-turquoise focus:border-transparent"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <label htmlFor="comment" className="block text-sm font-medium mb-2">
+                        Commentaire *
+                      </label>
+                      <textarea
+                        id="comment"
+                        rows={5}
+                        required
+                        className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-lg focus:ring-2 focus:ring-turquoise focus:border-transparent"
+                        placeholder="Partagez vos pensées..."
+                      ></textarea>
+                    </div>
+                    <Button type="submit" className="btn btn-primary">
+                      Publier le commentaire
+                    </Button>
+                  </form>
+                </div>
+              </div>
+
+              {/* Sidebar */}
+              <aside className="lg:col-span-1 mt-12 lg:mt-0">
+                <div className="card sticky top-24">
+                  <h3 className="text-lg font-semibold mb-4">À propos d'OREDY</h3>
+                  <p className="text-gray-300 text-sm mb-4">
+                    OREDY Technologies est une agence spécialisée dans le développement web, 
+                    le design et les solutions digitales innovantes.
+                  </p>
+                  <Link to="/contact">
+                    <Button className="btn btn-outline w-full">
+                      Nous contacter
+                    </Button>
+                  </Link>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </article>
+      </main>
+      
+      <Footer />
+    </div>
+  );
+};
+
+export default BlogPost;

@@ -36,6 +36,7 @@ const Header = () => {
             <a href="#home" className="text-white hover:text-turquoise transition-colors">Home</a>
             <a href="#about" className="text-white hover:text-turquoise transition-colors">About</a>
             <a href="#services" className="text-white hover:text-turquoise transition-colors">Services</a>
+            <Link to="/blog" className="text-white hover:text-turquoise transition-colors">Blog</Link>
             <a href="#testimonials" className="text-white hover:text-turquoise transition-colors">Témoignages</a>
             <a href="#contact" className="text-white hover:text-turquoise transition-colors">Contacts</a>
           </nav>
@@ -64,6 +65,7 @@ const Header = () => {
               <a href="#home" className="text-white hover:text-turquoise transition-colors py-2">Home</a>
               <a href="#about" className="text-white hover:text-turquoise transition-colors py-2">About</a>
               <a href="#services" className="text-white hover:text-turquoise transition-colors py-2">Services</a>
+              <Link to="/blog" className="text-white hover:text-turquoise transition-colors py-2">Blog</Link>
               <a href="#testimonials" className="text-white hover:text-turquoise transition-colors py-2">Témoignages</a>
               <a href="#contact" className="text-white hover:text-turquoise transition-colors py-2">Contacts</a>
             </div>
