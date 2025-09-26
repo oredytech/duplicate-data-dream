@@ -33,7 +33,7 @@ const Header = () => {
           </Link>
           
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="/" className="text-white hover:text-turquoise transition-colors">Home</a>
+            <Link to="/" className="text-white hover:text-turquoise transition-colors">Home</Link>
             <Link to="/about" className="text-white hover:text-turquoise transition-colors">About</Link>
             <Link to="/services" className="text-white hover:text-turquoise transition-colors">Services</Link>
             <Link to="/blog" className="text-white hover:text-turquoise transition-colors">Blog</Link>
@@ -62,7 +62,7 @@ const Header = () => {
         {mobileMenuOpen && (
           <div className="md:hidden absolute top-full left-0 w-full bg-black/95 backdrop-blur-md animate-fadeIn">
             <div className="container py-5 flex flex-col space-y-4">
-              <a href="/" className="text-white hover:text-turquoise transition-colors py-2">Home</a>
+              <Link to="/" className="text-white hover:text-turquoise transition-colors py-2">Home</Link>
               <Link to="/about" className="text-white hover:text-turquoise transition-colors py-2">About</Link>
               <Link to="/services" className="text-white hover:text-turquoise transition-colors py-2">Services</Link>
               <Link to="/blog" className="text-white hover:text-turquoise transition-colors py-2">Blog</Link>

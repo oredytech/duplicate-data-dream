@@ -126,17 +126,45 @@ const Blog = () => {
                           />
                         </PaginationItem>
                         
-                        {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                          <PaginationItem key={page}>
-                            <PaginationLink
-                              onClick={() => handlePageChange(page)}
-                              isActive={currentPage === page}
-                              className="cursor-pointer"
-                            >
-                              {page}
-                            </PaginationLink>
-                          </PaginationItem>
-                        ))}
+                {(() => {
+                  const delta = 2;
+                  const range = [];
+                  const rangeWithDots = [];
+                  
+                  for (let i = Math.max(2, currentPage - delta); i <= Math.min(totalPages - 1, currentPage + delta); i++) {
+                    range.push(i);
+                  }
+                  
+                  if (currentPage - delta > 2) {
+                    rangeWithDots.push(1, '...');
+                  } else {
+                    rangeWithDots.push(1);
+                  }
+                  
+                  rangeWithDots.push(...range);
+                  
+                  if (currentPage + delta < totalPages - 1) {
+                    rangeWithDots.push('...', totalPages);
+                  } else if (totalPages > 1) {
+                    rangeWithDots.push(totalPages);
+                  }
+                  
+                  return rangeWithDots.map((page, index) => (
+                    <PaginationItem key={index}>
+                      {page === '...' ? (
+                        <span className="flex h-9 w-9 items-center justify-center">...</span>
+                      ) : (
+                        <PaginationLink
+                          onClick={() => handlePageChange(page as number)}
+                          isActive={currentPage === page}
+                          className="cursor-pointer"
+                        >
+                          {page}
+                        </PaginationLink>
+                      )}
+                    </PaginationItem>
+                  ));
+                })()}
                         
                         <PaginationItem>
                           <PaginationNext 
