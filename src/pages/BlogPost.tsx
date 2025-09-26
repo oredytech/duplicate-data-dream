@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
-import { Calendar, ArrowLeft, Share2, Facebook, Twitter } from 'lucide-react';
+import { Calendar, ArrowLeft, Share2, Facebook, Twitter, MessageCircle, Copy, Check } from 'lucide-react';
+import { useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useWordPressPost } from '@/hooks/useWordPressBlog';
@@ -8,6 +9,7 @@ import { Button } from '@/components/ui/button';
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const { post, featuredMedia, loading, error } = useWordPressPost(slug || '');
+  const [linkCopied, setLinkCopied] = useState(false);
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('fr-FR', {
@@ -17,15 +19,35 @@ const BlogPost = () => {
     });
   };
 
+  const getArticleUrl = () => {
+    return `https://oredytech.com/blog/${slug}`;
+  };
+
   const shareOnFacebook = () => {
-    const url = encodeURIComponent(window.location.href);
+    const url = encodeURIComponent(getArticleUrl());
     window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
   };
 
   const shareOnTwitter = () => {
-    const url = encodeURIComponent(window.location.href);
+    const url = encodeURIComponent(getArticleUrl());
     const text = encodeURIComponent(post?.title.rendered || '');
     window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank');
+  };
+
+  const shareOnWhatsApp = () => {
+    const url = getArticleUrl();
+    const text = encodeURIComponent(`${post?.title.rendered || ''} - ${url}`);
+    window.open(`https://wa.me/?text=${text}`, '_blank');
+  };
+
+  const copyLink = async () => {
+    try {
+      await navigator.clipboard.writeText(getArticleUrl());
+      setLinkCopied(true);
+      setTimeout(() => setLinkCopied(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy link:', err);
+    }
   };
 
   if (loading) {
@@ -119,35 +141,59 @@ const BlogPost = () => {
               <div className="lg:col-span-3">
                 <div 
                   className="prose prose-invert prose-lg max-w-none
-                    prose-headings:text-white prose-headings:font-semibold
-                    prose-p:text-gray-300 prose-p:leading-relaxed
-                    prose-a:text-turquoise prose-a:no-underline hover:prose-a:underline
-                    prose-strong:text-white prose-em:text-gray-300
-                    prose-ul:text-gray-300 prose-ol:text-gray-300
-                    prose-li:text-gray-300
-                    prose-blockquote:border-l-turquoise prose-blockquote:text-gray-300
-                    prose-code:bg-gray-800 prose-code:text-turquoise prose-code:px-1 prose-code:py-0.5 prose-code:rounded
-                    prose-pre:bg-gray-900 prose-pre:border prose-pre:border-gray-700"
+                    prose-headings:text-white prose-headings:font-bold prose-headings:mb-6 prose-headings:mt-8
+                    prose-h1:text-3xl prose-h1:mb-8 prose-h1:mt-0
+                    prose-h2:text-2xl prose-h2:border-b prose-h2:border-turquoise/30 prose-h2:pb-2
+                    prose-h3:text-xl prose-h3:text-turquoise
+                    prose-h4:text-lg prose-h4:text-turquoise/80
+                    prose-p:text-gray-300 prose-p:leading-relaxed prose-p:mb-6 prose-p:text-base
+                    prose-a:text-turquoise prose-a:no-underline hover:prose-a:underline prose-a:transition-colors
+                    prose-strong:text-white prose-strong:font-semibold
+                    prose-em:text-gray-300 prose-em:italic
+                    prose-ul:text-gray-300 prose-ul:mb-6 prose-ul:space-y-2
+                    prose-ol:text-gray-300 prose-ol:mb-6 prose-ol:space-y-2
+                    prose-li:text-gray-300 prose-li:mb-1
+                    prose-blockquote:border-l-4 prose-blockquote:border-l-turquoise prose-blockquote:bg-gray-800/50 
+                    prose-blockquote:text-gray-300 prose-blockquote:pl-6 prose-blockquote:py-4 prose-blockquote:mb-6
+                    prose-blockquote:italic prose-blockquote:text-lg
+                    prose-code:bg-gray-800 prose-code:text-turquoise prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-sm
+                    prose-pre:bg-gray-900 prose-pre:border prose-pre:border-gray-700 prose-pre:p-4 prose-pre:rounded-lg prose-pre:mb-6
+                    prose-img:rounded-lg prose-img:mb-6
+                    prose-hr:border-gray-700 prose-hr:my-8"
                   dangerouslySetInnerHTML={{ __html: post.content.rendered }}
                 />
 
                 {/* Social Sharing */}
                 <div className="mt-12 pt-8 border-t border-gray-700">
                   <h3 className="text-lg font-semibold mb-4">Partager cet article</h3>
-                  <div className="flex gap-4">
+                  <div className="flex flex-wrap gap-3">
                     <Button
                       onClick={shareOnFacebook}
-                      className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700"
+                      className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white"
                     >
                       <Facebook size={16} />
                       Facebook
                     </Button>
                     <Button
                       onClick={shareOnTwitter}
-                      className="flex items-center gap-2 bg-blue-400 hover:bg-blue-500"
+                      className="flex items-center gap-2 bg-blue-400 hover:bg-blue-500 text-white"
                     >
                       <Twitter size={16} />
                       Twitter
+                    </Button>
+                    <Button
+                      onClick={shareOnWhatsApp}
+                      className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white"
+                    >
+                      <MessageCircle size={16} />
+                      WhatsApp
+                    </Button>
+                    <Button
+                      onClick={copyLink}
+                      className="flex items-center gap-2 bg-gray-600 hover:bg-gray-700 text-white"
+                    >
+                      {linkCopied ? <Check size={16} /> : <Copy size={16} />}
+                      {linkCopied ? 'Copié!' : 'Copier le lien'}
                     </Button>
                   </div>
                 </div>
