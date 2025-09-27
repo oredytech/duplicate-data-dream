@@ -141,25 +141,27 @@ const BlogPost = () => {
               <div className="lg:col-span-3">
                 <div 
                   className="prose prose-invert prose-lg max-w-none
-                    prose-headings:text-white prose-headings:font-bold prose-headings:mb-6 prose-headings:mt-8
-                    prose-h1:text-3xl prose-h1:mb-8 prose-h1:mt-0
-                    prose-h2:text-2xl prose-h2:border-b prose-h2:border-turquoise/30 prose-h2:pb-2
-                    prose-h3:text-xl prose-h3:text-turquoise
-                    prose-h4:text-lg prose-h4:text-turquoise/80
-                    prose-p:text-gray-300 prose-p:leading-relaxed prose-p:mb-6 prose-p:text-base
-                    prose-a:text-turquoise prose-a:no-underline hover:prose-a:underline prose-a:transition-colors
+                    prose-headings:text-white prose-headings:font-bold prose-headings:mb-8 prose-headings:mt-12
+                    prose-h1:text-4xl prose-h1:mb-10 prose-h1:mt-0 prose-h1:leading-tight
+                    prose-h2:text-3xl prose-h2:mb-8 prose-h2:mt-12 prose-h2:border-b prose-h2:border-turquoise/30 prose-h2:pb-3
+                    prose-h3:text-2xl prose-h3:mb-6 prose-h3:mt-10 prose-h3:text-turquoise prose-h3:font-semibold
+                    prose-h4:text-xl prose-h4:mb-5 prose-h4:mt-8 prose-h4:text-turquoise/80 prose-h4:font-medium
+                    prose-h5:text-lg prose-h5:mb-4 prose-h5:mt-6 prose-h5:text-white prose-h5:font-medium
+                    prose-h6:text-base prose-h6:mb-4 prose-h6:mt-6 prose-h6:text-gray-300 prose-h6:font-medium
+                    prose-p:text-gray-300 prose-p:leading-[1.8] prose-p:mb-8 prose-p:mt-0 prose-p:text-[17px]
+                    prose-a:text-turquoise prose-a:no-underline hover:prose-a:underline prose-a:transition-colors prose-a:font-medium
                     prose-strong:text-white prose-strong:font-semibold
                     prose-em:text-gray-300 prose-em:italic
-                    prose-ul:text-gray-300 prose-ul:mb-6 prose-ul:space-y-2
-                    prose-ol:text-gray-300 prose-ol:mb-6 prose-ol:space-y-2
-                    prose-li:text-gray-300 prose-li:mb-1
+                    prose-ul:text-gray-300 prose-ul:mb-8 prose-ul:mt-6 prose-ul:space-y-3 prose-ul:pl-6
+                    prose-ol:text-gray-300 prose-ol:mb-8 prose-ol:mt-6 prose-ol:space-y-3 prose-ol:pl-6
+                    prose-li:text-gray-300 prose-li:mb-2 prose-li:leading-relaxed
                     prose-blockquote:border-l-4 prose-blockquote:border-l-turquoise prose-blockquote:bg-gray-800/50 
-                    prose-blockquote:text-gray-300 prose-blockquote:pl-6 prose-blockquote:py-4 prose-blockquote:mb-6
-                    prose-blockquote:italic prose-blockquote:text-lg
-                    prose-code:bg-gray-800 prose-code:text-turquoise prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-sm
-                    prose-pre:bg-gray-900 prose-pre:border prose-pre:border-gray-700 prose-pre:p-4 prose-pre:rounded-lg prose-pre:mb-6
-                    prose-img:rounded-lg prose-img:mb-6
-                    prose-hr:border-gray-700 prose-hr:my-8"
+                    prose-blockquote:text-gray-200 prose-blockquote:pl-8 prose-blockquote:py-6 prose-blockquote:mb-10 prose-blockquote:mt-8
+                    prose-blockquote:italic prose-blockquote:text-lg prose-blockquote:font-medium prose-blockquote:rounded-r-lg
+                    prose-code:bg-gray-800 prose-code:text-turquoise prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-sm prose-code:font-mono
+                    prose-pre:bg-gray-900 prose-pre:border prose-pre:border-gray-700 prose-pre:p-6 prose-pre:rounded-lg prose-pre:mb-8 prose-pre:mt-6
+                    prose-img:rounded-lg prose-img:mb-8 prose-img:mt-6 prose-img:shadow-lg
+                    prose-hr:border-gray-700 prose-hr:my-12 prose-hr:border-t-2"
                   dangerouslySetInnerHTML={{ __html: post.content.rendered }}
                 />
 
